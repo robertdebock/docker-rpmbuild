@@ -17,13 +17,18 @@ A few directories will be added later by `rpmbuild`: BUILD, BUILDROOT, RPMS, SOU
 A quick empty .spec file is easy create:
 
 ```
-docker run -v $(pwd)/newpackage/:/build robertdebock/docker-rpmbuild rpmdev-newspec --ouput /build/SPECS/newpackage.spec
+docker run \
+  -v $(pwd)/newpackage/:/build \
+  robertdebock/docker-rpmbuild \
+  rpmdev-newspec --ouput /build/SPECS/newpackage.spec
 ```
 
 # Building
 Start the docker image with mount options to insert the .spec file.
 ```
-docker run -v $(pwd)/newpackage/:/build robertdebock/docker-rpmbuild
+docker run \
+  -v $(pwd)/newpackage/:/build
+  robertdebock/docker-rpmbuild
 ```
 
 All requirements (Source:, SourceN:, PatchN and BuildRequires) will be installed.
