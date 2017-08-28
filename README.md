@@ -2,7 +2,7 @@
 A Docker image capable to building RPM's.
 
 The Docker image can be found here:
-https://hub.docker.com/r/robertdebock/docker-rpm/
+https://hub.docker.com/r/robertdebock/docker-rpmbuild/
 
 # Good to know
 Building RPMS requires a specific directory structure. Probably you are going to have a directory for each RPM you are going to build. In that case, this structure will be useful:
