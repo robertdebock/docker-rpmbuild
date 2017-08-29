@@ -14,6 +14,6 @@ CMD echo "Creating required directories." && \
     echo "Installing all Sources and Patches." && \
     find /build/SPECS -name '*.spec' -exec spectool -A -g -D -C /build/SOURCES/ {} \; && \
     echo "Changing owner of spec files." && \
-    find /build/SPECS -name '*.spec' -exec chown root:root {} && \;
+    find /build/SPECS -name '*.spec' -exec chown root:root {} \; && \
     echo "Building the RPM." && \
     find /build/SPECS -name '*.spec' -exec rpmbuild -ba {} \;
