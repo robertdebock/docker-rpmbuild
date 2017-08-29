@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:7.3.1611
 
 LABEL version="1.0"
 LABEL description="A container to build RPMS."
