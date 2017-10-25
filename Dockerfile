@@ -1,6 +1,6 @@
 FROM centos:7.4.1708
 
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL description="A container to build RPMS."
 
 RUN yum -y groupinstall "Development Tools" && \
