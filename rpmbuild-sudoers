@@ -1,1 +1,1 @@
-builduser ALL=(ALL) NOPASSWD:ALL
+rpmbuild ALL=(ALL) NOPASSWD:ALL
