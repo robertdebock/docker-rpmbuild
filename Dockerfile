@@ -5,7 +5,7 @@ LABEL description="A container to build RPMS."
 
 RUN yum -y groupinstall "Development Tools" && \
     yum -y install rpmdevtools rpmlint sudo && \
-    useradd rpmbuild -G wheel& & \
+    useradd -G wheel rpmbuild && \
     /bin/echo "%_topdir /build" > /home/rpmbuild/.rpmmacros
     
 USER rpmbuild
