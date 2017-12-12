@@ -1,6 +1,6 @@
 FROM centos:7.4.1708
 
-LABEL version="1.2"
+LABEL version="1.3"
 LABEL description="A container to build RPMS."
 
 RUN yum -y groupinstall "Development Tools" && \
@@ -14,4 +14,4 @@ ADD run.sh /run.sh
 
 ADD rpmbuild-sudoers /etc/sudoers.d/rpmbuild-sudoers
 
-ENTRYPOINT [ "/run.sh" ]
+ENTRYPOINT [ "sudo", "-u", "rpmbuild", "/run.sh" ]
