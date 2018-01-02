@@ -14,4 +14,4 @@ ADD run.sh /run.sh
 
 ADD rpmbuild-sudoers /etc/sudoers.d/rpmbuild-sudoers
 
-ENTRYPOINT [ "sudo", "-u", "rpmbuild", "/run.sh" ]
+CMD [ "sudo", "-u", "rpmbuild", "/run.sh" ]
